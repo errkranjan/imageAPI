@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Link Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+    <section>
+        <div class="container p-5">
+        <form action="deletefiles.php" method="post" enctype="multipart/form-data">
+      
+          <div class="row">
+            <div class="col-lg-5 mx-auto">
+              <div class="p-5 bg-white shadow rounded-lg"><img src="https://res.cloudinary.com/mhmd/image/upload/v1557366994/img_epm3iz.png" alt="" width="200" class="d-block mx-auto mb-4 rounded-pill">
+      
+                <!-- Default bootstrap file upload-->
+      
+                <h6 class="text-center mb-4 text-muted">
+                  Enter the password in the box below & Press Delete button.<br/><span style="color:red;"><i>You can't restore images once deleted!</i>
+                </h6>
+      
+                <div class="custom-file mb-5">
+                    <input type="password" name="key" id="key" placeholder="Please enter key" class="form-control p-1" required autofocus><br/>
+                    <button type="submit" class="btn btn-primary form-control p-2">Delete All Images</button>
+                    <a href="index.html" class="btn btn-secondary mt-1 form-control">Upload Images</a>
+                </div>
+                <!-- End -->
+      
+              </div>
+            </div>
+          </div>
+        </form>
+        </div>
+      </section>
+</body>
+</html>
