@@ -1,5 +1,5 @@
 <?php
-$domain='https://engineeringconcepts.in';
+$domain='https://zofico.com';
 $Key=hash('sha256',$_POST['key']);
 // print_r($Key);
 $KeyOnServer=file_get_contents('key.txt');
@@ -19,8 +19,8 @@ if($Key===$KeyOnServer){
         $temp = explode(".", $_FILES["upload"]["name"][$i]);
         $newfilename = str_replace(' ','_',$_FILES["upload"]["name"][$i].round(microtime(true)) . '.' .end($temp));
         if(move_uploaded_file($_FILES["upload"]["tmp_name"][$i] , "./uploadedfiles/". $newfilename)){
-            array_push($Output['Links'],$domain."/imageAPI/uploadedfiles/".$newfilename);
-            $CombinedLinks=$CombinedLinks.$domain."/imageAPI/uploadedfiles/".$newfilename." | ";
+            array_push($Output['Links'],$domain."/imageapi/uploadedfiles/".$newfilename);
+            $CombinedLinks=$CombinedLinks.$domain."/imageapi/uploadedfiles/".$newfilename." | ";
         }else{
             die("Couldn't Generate Links!");
         }
