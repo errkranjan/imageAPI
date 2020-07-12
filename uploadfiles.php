@@ -18,9 +18,9 @@ if($Key===$KeyOnServer){
     //Make sure we have a file path
         $temp = explode(".", $_FILES["upload"]["name"][$i]);
         $newfilename = str_replace(' ','_',$_FILES["upload"]["name"][$i].round(microtime(true)) . '.' .end($temp));
-        if(move_uploaded_file($_FILES["upload"]["tmp_name"][$i] , "./uploadedfiles/". $newfilename)){
-            array_push($Output['Links'],$domain."/imageapi/uploadedfiles/".$newfilename);
-            $CombinedLinks=$CombinedLinks.$domain."/imageapi/uploadedfiles/".$newfilename." | ";
+        if(move_uploaded_file($_FILES["upload"]["tmp_name"][$i] , "./". $newfilename)){
+            array_push($Output['Links'],$domain."/imageapi/".$newfilename);
+            $CombinedLinks=$CombinedLinks.$domain."/imageapi/".$newfilename." | ";
         }else{
             die("Couldn't Generate Links!");
         }
